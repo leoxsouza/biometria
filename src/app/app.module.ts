@@ -5,20 +5,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppTopbarComponent } from './app.topbar.component';
 import { AppMenuComponent } from './app.menu.component';
-import {MenubarModule} from 'primeng/menubar';
-import { PRIMENG_IMPORTS } from './primeng-imports';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MenuModule} from 'primeng/menu';
+import {ButtonModule} from 'primeng/button';
+import { AlunosModule } from './alunos/alunos.module';
+import {TableModule} from 'primeng/table';
+import { AlunosFormComponent } from './alunos/alunos-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppTopbarComponent,
-    AppMenuComponent
+    AppMenuComponent,
+    AlunosFormComponent
   ],
   imports: [
   BrowserModule,
     AppRoutingModule,
-    MenubarModule,
-    PRIMENG_IMPORTS
+    BrowserAnimationsModule,
+    MenuModule,
+    ButtonModule,
+    AlunosModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
