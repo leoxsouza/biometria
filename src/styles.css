@@ -11,3 +11,31 @@
     -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     color: aliceblue;
 }
+
+.container {
+    margin: 20px;
+}
+
+label,
+p-radioButton {
+    margin-right: 15px;
+    font-family: sans-serif;
+    color: aliceblue;
+}
+
+h1,
+h3 {
+    font-family: sans-serif;
+    color: aliceblue;
+    padding: 0;
+    margin: 0;
+}
+
+.div1 {
+    background-color: rgb(100, 155, 187);
+}
+
+.div2 {
+    background-color: rgb(63, 139, 184);
+    margin: 10px 0;
+}

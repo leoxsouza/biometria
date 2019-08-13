@@ -1,10 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AlunosComponent } from './alunos.component';
 import { RouterModule } from '@angular/router';
 import { AlunoRoutes } from './alunos.route';
-import {ButtonModule} from 'primeng/button';
-import {TableModule} from 'primeng/table';
+import {RadioButtonModule} from 'primeng/radiobutton';
 
 @NgModule({
   declarations: [
@@ -13,8 +12,8 @@ import {TableModule} from 'primeng/table';
   imports: [
     CommonModule,
     RouterModule.forChild(AlunoRoutes),
-    ButtonModule,
-    TableModule
-  ]
+    RadioButtonModule
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AlunosModule { }

@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlunosFormComponent implements OnInit {
 
+  sexo: string;
+
   constructor() { }
+
+  date1: Date;
+
 
   ngOnInit() {
   }
