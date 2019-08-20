@@ -1,72 +1,124 @@
 <html>
-<form>
+  <form class="contain">
     <div class="ui-g ui-fluid div1">
-        <div class="ui-g-12 ui-md-12">
-            <h1>Cadastro de Aluno</h1>
-        </div>
-        <div class="ui-g-12 ui-md-12">
-            <h3>Dados pessoais</h3>
-        </div>
-        <div class="ui-g-12">
-            <div class="ui-g-6 ui-md-5 ui-sm-12">
-                <label for="nomeAluno">Nome do aluno:</label>
-                <input style="background-color: cadetblue;" type="text" pInputText id="nomeAluno" name="nomeAluno" style="width: 450px;">
-            </div>
-
-            <div class="ui-g-6 ui-md-6 ui-sm-12">
-                <label>Sexo:</label>
-                <br>
-                <p-radioButton name="sexo" value="M" label="Masculino" [(ngModel)]="sexo"></p-radioButton>
-                <p-radioButton name="sexo" value="F" label="Feminino" [(ngModel)]="sexo"></p-radioButton>
-            </div>
-
-        </div>
-
-        <div class="ui-g-12">
-            <div class="ui-g-6 ui-md-2 ui-sm-12">
-                <label for="cpf">CPF: </label>
-                <p-inputMask mask="999.999.999-99" name="cpf"></p-inputMask>
-            </div>
-            <div class="ui-g-12 ui-md-4">
-                <label>Nascimento:</label>
-                <p-calendar [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2030" [(ngModel)]="date1"></p-calendar>
-            </div>
-        </div>
-
+      <div class="ui-g-12 ui-md-12">
+        <h1>Cadastro de Aluno</h1>
+      </div>
+      <div class="ui-g-12 ui-md-12">
+        <h3>Dados pessoais</h3>
+      </div>
+      <div class="ui-g-12">
         <div class="ui-g-6 ui-md-5 ui-sm-12">
-            <label for="nomePai">Nome do Pai:</label>
-            <input type="text" pInputText id="nomePai" name="nomePai" style="width: 450px;">
+          <label for="nomeAluno">Nome do aluno:</label>
+          <input
+            type="text"
+            pInputText
+            id="nomeAluno"
+            name="nomeAluno"
+            class="input"
+          />
         </div>
 
-        <div class="ui-g-6 ui-md-5 ui-sm-12">
-            <label for="nomeMae">Nome da Mãe:</label>
-            <input type="text" pInputText id="nomeMae" name="nomeMae" style="width: 450px;">
+        <div class="ui-g-6 ui-md-6 ui-sm-12">
+          <label>Sexo:</label>
+          <br />
+          <p-radioButton
+            name="sexo"
+            value="M"
+            label="Masculino"
+            [(ngModel)]="sexo"
+          ></p-radioButton>
+          <p-radioButton
+            name="sexo"
+            value="F"
+            label="Feminino"
+            [(ngModel)]="sexo"
+          ></p-radioButton>
         </div>
+      </div>
 
-        <div class="ui-g-6 ui-md-5 ui-sm-12"></div>
+      <div class="ui-g-12">
+        <div class="ui-g-6 ui-md-2 ui-sm-12">
+          <label for="cpf">CPF: </label>
+          <p-inputMask
+            mask="999.999.999-99"
+            name="cpf"
+            styleClass="input"
+          ></p-inputMask>
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <label>Nascimento:</label>
+          <p-calendar
+            [monthNavigator]="true"
+            [yearNavigator]="true"
+            yearRange="2000:2030"
+            [(ngModel)]="date1"
+            inputStyleClass="input-date"
+          ></p-calendar>
+        </div>
+      </div>
 
+      <div class="ui-g-6 ui-md-5 ui-sm-12">
+        <label for="nomePai">Nome do Pai:</label>
+        <input
+          type="text"
+          pInputText
+          id="nomePai"
+          name="nomePai"
+          class="input"
+        />
+      </div>
+
+      <div class="ui-g-6 ui-md-5 ui-sm-12">
+        <label for="nomeMae">Nome da Mãe:</label>
+        <input
+          type="text"
+          pInputText
+          id="nomeMae"
+          name="nomeMae"
+          class="input"
+        />
+      </div>
+
+      <div class="ui-g-6 ui-md-5 ui-sm-12"></div>
     </div>
-    <div class="ui-g ui-fluid div2">
-        <div class="ui-g-12 ui-md-12">
-            <h3>Contatos</h3>
-        </div>
+    <div class="ui-g ui-fluid div1">
+      <div class="ui-g-12 ui-md-12">
+        <h3>Contatos</h3>
+      </div>
 
-        <div class="ui-g-12">
-            <div class="ui-g-6 ui-md-2 ui-sm-12">
-                <label for="residencia">Tel. residencial: </label>
-                <p-inputMask mask="(99)9999-9999" name="residencia"></p-inputMask>
-            </div>
-            <div class="ui-g-12 ui-md-2 ui-sm-12">
-                <label for="celular">Tel. celular: </label>
-                <p-inputMask mask="(99)99999-9999" name="celular"></p-inputMask>
-            </div>
-            <div class="ui-g-12 ui-md-2 ui-sm-12">
-                <label for="comercial">Tel. comercial: </label>
-                <p-inputMask mask="(99)9999-9999" name="comercial"></p-inputMask>
-            </div>
+      <div class="ui-g-12">
+        <div class="ui-g-6 ui-md-2 ui-sm-12">
+          <label for="residencia">Tel. residencial: </label>
+          <p-inputMask
+            mask="(99)9999-9999"
+            name="residencia"
+            styleClass="input"
+          ></p-inputMask>
         </div>
-
+        <div class="ui-g-12 ui-md-2 ui-sm-12">
+          <label for="celular">Tel. celular: </label>
+          <p-inputMask
+            mask="(99)99999-9999"
+            name="celular"
+            styleClass="input"
+          ></p-inputMask>
+        </div>
+        <div class="ui-g-12 ui-md-2 ui-sm-12">
+          <label for="comercial">Tel. comercial: </label>
+          <p-inputMask
+            mask="(99)9999-9999"
+            name="comercial"
+            styleClass="input"
+          ></p-inputMask>
+        </div>
+      </div>
     </div>
-</form>
 
+    <div class="ui-g ui-fluid div1">
+      <div class="ui-g-12 ui-md-12">
+        <h3>Endereço</h3>
+      </div>
+    </div>
+  </form>
 </html>
