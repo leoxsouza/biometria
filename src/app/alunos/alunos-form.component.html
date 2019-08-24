@@ -26,25 +26,15 @@
             name="sexo"
             value="M"
             label="Masculino"
-            [(ngModel)]="sexo"
           ></p-radioButton>
-          <p-radioButton
-            name="sexo"
-            value="F"
-            label="Feminino"
-            [(ngModel)]="sexo"
-          ></p-radioButton>
+          <p-radioButton name="sexo" value="F" label="Feminino"></p-radioButton>
         </div>
       </div>
 
       <div class="ui-g-12">
         <div class="ui-g-6 ui-md-2 ui-sm-12">
           <label for="cpf">CPF: </label>
-          <p-inputMask
-            mask="999.999.999-99"
-            name="cpf"
-            styleClass="input"
-          ></p-inputMask>
+          <p-inputMask mask="999.999.999-99" name="cpf"></p-inputMask>
         </div>
         <div class="ui-g-12 ui-md-4">
           <label>Nascimento:</label>
@@ -52,8 +42,6 @@
             [monthNavigator]="true"
             [yearNavigator]="true"
             yearRange="2000:2030"
-            [(ngModel)]="date1"
-            inputStyleClass="input-date"
           ></p-calendar>
         </div>
       </div>
@@ -118,6 +106,163 @@
     <div class="ui-g ui-fluid div1">
       <div class="ui-g-12 ui-md-12">
         <h3>Endereço</h3>
+      </div>
+
+      <div class="ui-g-12">
+        <div class="ui-g-4 ui-md-2 ui-sm-12">
+          <label for="cep">Cep:</label>
+          <input
+            [(ngModel)]="endereco.cep"
+            type="text"
+            pInputText
+            id="cep"
+            name="cep"
+            class="input"
+            (blur)="getCamposEndereco()"
+          />
+        </div>
+
+        <div class="ui-g-6 ui-md-5 ui-sm-12">
+          <label for="endereco">Rua:</label>
+          <input
+            [(ngModel)]="endereco.logradouro"
+            type="text"
+            pInputText
+            id="endereco"
+            name="endereco"
+            class="input"
+          />
+        </div>
+
+        <div class="ui-g-4 ui-md-2 ui-sm-12">
+          <label for="numero">Número:</label>
+          <input
+            type="text"
+            pInputText
+            id="numero"
+            name="numero"
+            style="height: 25px"
+          />
+        </div>
+      </div>
+
+      <div class="ui-g-12">
+        <div class="ui-g-3 ui-md-3 ui-sm-12">
+          <label for="bairro">Bairro:</label>
+          <input
+            [(ngModel)]="endereco.bairro"
+            type="text"
+            pInputText
+            id="bairro"
+            name="bairro"
+            class="input"
+          />
+        </div>
+
+        <div class="ui-g-3 ui-md-3 ui-sm-12">
+          <label for="cidade">Cidade:</label>
+          <input
+            [(ngModel)]="endereco.localidade"
+            type="text"
+            pInputText
+            id="cidade"
+            name="cidade"
+            class="input"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-g ui-fluid div1">
+      <div class="ui-g-12 ui-md-12">
+        <h3>Biometria</h3>
+      </div>
+      <div class="ui-g-12">
+        <p-fieldset
+          legend="Mão direita"
+          [toggleable]="true"
+          styleClass="fieldset"
+        >
+          <div class="ui-g-1 ui-md-1"></div>
+
+          <div class="ui-g-2 ui-md-2 ui-sm-12">
+            <p-card styleClass="card">
+              Clique para salvar a imagem da digital.
+            </p-card>
+            <label class="card-label">Primeiro Quirodáctilo</label>
+          </div>
+
+          <div class="ui-g-2 ui-md-2 ui-sm-12">
+            <p-card styleClass="card">
+              Clique para salvar a imagem da digital.
+            </p-card>
+            <label class="card-label">Segundo Quirodáctilo</label>
+          </div>
+
+          <div class="ui-g-2 ui-md-2 ui-sm-12">
+            <p-card styleClass="card">
+              Clique para salvar a imagem da digital.
+            </p-card>
+            <label class="card-label">Terceiro Quirodáctilo</label>
+          </div>
+
+          <div class="ui-g-2 ui-md-2 ui-sm-12">
+            <p-card styleClass="card">
+              Clique para salvar a imagem da digital.
+            </p-card>
+            <label class="card-label">Quarto Quirodáctilo</label>
+          </div>
+
+          <div class="ui-g-2 ui-md-2 ui-sm-12">
+            <p-card styleClass="card">
+              Clique para salvar a imagem da digital.
+            </p-card>
+            <label class="card-label">Quinto Quirodáctilo</label>
+          </div>
+        </p-fieldset>
+
+        <p-fieldset
+          legend="Mão esquerda"
+          [toggleable]="true"
+          styleClass="fieldset"
+        >
+          <div class="ui-g-1 ui-md-1"></div>
+
+          <div class="ui-g-2 ui-md-2 ui-sm-12">
+            <p-card styleClass="card">
+              Clique para salvar a imagem da digital.
+            </p-card>
+            <label class="card-label">Primeiro Quirodáctilo</label>
+          </div>
+
+          <div class="ui-g-2 ui-md-2 ui-sm-12">
+            <p-card styleClass="card">
+              Clique para salvar a imagem da digital.
+            </p-card>
+            <label class="card-label">Segundo Quirodáctilo</label>
+          </div>
+
+          <div class="ui-g-2 ui-md-2 ui-sm-12">
+            <p-card styleClass="card">
+              Clique para salvar a imagem da digital.
+            </p-card>
+            <label class="card-label">Terceiro Quirodáctilo</label>
+          </div>
+
+          <div class="ui-g-2 ui-md-2 ui-sm-12">
+            <p-card styleClass="card">
+              Clique para salvar a imagem da digital.
+            </p-card>
+            <label class="card-label">Quarto Quirodáctilo</label>
+          </div>
+
+          <div class="ui-g-2 ui-md-2 ui-sm-12">
+            <p-card styleClass="card">
+              Clique para salvar a imagem da digital.
+            </p-card>
+            <label class="card-label">Quinto Quirodáctilo</label>
+          </div>
+        </p-fieldset>
       </div>
     </div>
   </form>

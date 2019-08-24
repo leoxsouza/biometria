@@ -1,5 +1,29 @@
 <div class="topbar">
-    <div>
-        <app-menu></app-menu>
-    </div>
+  <img src="../assets/brand.png" alt="logo" [routerLink]="['/']" class="logo" />
+  <ul class="topbar-menu">
+    <li>
+      <a
+        [routerLink]="['/']"
+        routerLinkActive="router-link-active"
+        class="link-menu"
+        >Listar</a
+      >
+    </li>
+    <li>
+      <a
+        [routerLink]="['/alunos/inserir']"
+        routerLinkActive="router-link-active"
+        class="link-menu"
+        >Cadastrar</a
+      >
+    </li>
+    <li class="logout">
+      <a
+        [routerLink]="['/']"
+        routerLinkActive="router-link-active"
+        class="link-menu"
+        >sair</a
+      >
+    </li>
+  </ul>
 </div>
