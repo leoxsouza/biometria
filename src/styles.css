@@ -45,6 +45,18 @@ h3 {
   border-radius: 10px;
 }
 
+.list {
+  background-color: #d3e6f1;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.list h2 {
+  color: #007ad9;
+  font-family: sans-serif;
+  text-align: center;
+}
+
 body {
   background-color: #8eabbd;
 }
@@ -141,4 +153,15 @@ a:hover {
 
 .fieldset {
   margin: 20px;
+}
+
+td,
+th {
+  background-color: #0593e6 !important;
+  color: aliceblue !important;
+  text-align: center;
+}
+
+th {
+  background-color: #006eff !important;
 }

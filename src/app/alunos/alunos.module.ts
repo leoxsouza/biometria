@@ -7,16 +7,19 @@ import { RadioButtonModule } from "primeng/radiobutton";
 import { NgxViacepModule } from "@brunoc/ngx-viacep";
 import { FieldsetModule } from "primeng/fieldset";
 import { CardModule } from "primeng/card";
+import { AlunosFormComponent } from "./alunos-form.component";
+import { PRIMENG_IMPORTS } from "../primeng-imports";
 
 @NgModule({
-  declarations: [AlunosComponent],
+  declarations: [AlunosComponent, AlunosFormComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(AlunoRoutes),
     RadioButtonModule,
     NgxViacepModule,
     FieldsetModule,
-    CardModule
+    CardModule,
+    PRIMENG_IMPORTS
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

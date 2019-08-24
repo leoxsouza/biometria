@@ -34,14 +34,19 @@
       <div class="ui-g-12">
         <div class="ui-g-6 ui-md-2 ui-sm-12">
           <label for="cpf">CPF: </label>
-          <p-inputMask mask="999.999.999-99" name="cpf"></p-inputMask>
+          <p-inputMask
+            mask="999.999.999-99"
+            name="cpf"
+            styleClass="input"
+          ></p-inputMask>
         </div>
-        <div class="ui-g-12 ui-md-4">
+        <div class="ui-g-12 ui-md-2">
           <label>Nascimento:</label>
           <p-calendar
             [monthNavigator]="true"
             [yearNavigator]="true"
             yearRange="2000:2030"
+            dateFormat="dd/mm/yy"
           ></p-calendar>
         </div>
       </div>

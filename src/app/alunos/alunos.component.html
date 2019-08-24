@@ -1,9 +1,35 @@
-<div class="ui-g-2 ui-md-2 ui-sm-12"></div>
-<div class="ui-g-2 ui-md-2 ui-sm-12">
-    <button pButton label="Pesquisar">
-                            </button>
-</div>
-<div class="ui-g-2 ui-md-2 ui-sm-12">
-    <button pButton label="Cadastrar" [routerLink]="['/alunos', 'inserir']">
-                            </button>
+<div class="ui-g ui-fluid list">
+  <div class="ui-g-12 ui-md-12">
+    <h2>Listagem de Alunos</h2>
+    <div class="ui-g-2 ui-md-4 ui-sm-12"></div>
+    <div class="ui-g-2 ui-md-2 ui-sm-12">
+      <button pButton label="Pesquisar"></button>
+    </div>
+    <div class="ui-g-2 ui-md-2 ui-sm-12">
+      <button
+        pButton
+        label="Cadastrar"
+        [routerLink]="['/alunos', 'inserir']"
+      ></button>
+    </div>
+  </div>
+
+  <div class="ui-md-11">
+    <p-table [columns]="cols" [value]="alunos">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of columns">
+            {{ col.header }}
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+          <td *ngFor="let col of columns">
+            {{ rowData[col.field] }}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
 </div>
