@@ -21,6 +21,8 @@
         "@angular/platform-browser-dynamic": "~8.2.0",
         "@angular/router": "~8.2.0",
         "@brunoc/ngx-viacep": "^2.1.2",
+        "angular-cli-ghpages": "^0.6.0-rc.2",
+        "ng-block-ui": "^2.1.7",
         "primeicons": "^2.0.0",
         "primeng": "^8.0.2",
         "rxjs": "~6.4.0",

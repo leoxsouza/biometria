@@ -10,9 +10,10 @@ import { ButtonModule } from "primeng/button";
 import { AlunosModule } from "./alunos/alunos.module";
 import { TableModule } from "primeng/table";
 import { PRIMENG_IMPORTS } from "./primeng-imports";
+import { FooterComponent } from './footer.component';
 
 @NgModule({
-  declarations: [AppComponent, AppTopbarComponent],
+  declarations: [AppComponent, AppTopbarComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

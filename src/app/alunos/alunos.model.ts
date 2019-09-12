@@ -1,5 +1,8 @@
-import { Endereco } from "./endereco.model";
-
 export class Aluno {
-  endereco: Endereco;
+  nome: string;
+  cpf: string;
+  sexo: string;
+  nomePai: string;
+  nomeMae: string;
+  nascimento: Date;
 }

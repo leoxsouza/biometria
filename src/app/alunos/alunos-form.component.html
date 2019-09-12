@@ -1,5 +1,5 @@
 <html>
-  <form class="contain">
+  <form #ngForm="ngForm" (ngSubmit)="persistirRegistro(ngForm)" class="contain">
     <div class="ui-g ui-fluid div1">
       <div class="ui-g-12 ui-md-12">
         <h1>Cadastro de Aluno</h1>
@@ -11,6 +11,7 @@
         <div class="ui-g-6 ui-md-5 ui-sm-12">
           <label for="nomeAluno">Nome do aluno:</label>
           <input
+            [(ngModel)]="aluno.nome"
             type="text"
             pInputText
             id="nomeAluno"
@@ -23,11 +24,17 @@
           <label>Sexo:</label>
           <br />
           <p-radioButton
+            [(ngModel)]="aluno.sexo"
             name="sexo"
             value="M"
             label="Masculino"
           ></p-radioButton>
-          <p-radioButton name="sexo" value="F" label="Feminino"></p-radioButton>
+          <p-radioButton
+            [(ngModel)]="aluno.sexo"
+            name="sexo"
+            value="F"
+            label="Feminino"
+          ></p-radioButton>
         </div>
       </div>
 
@@ -35,6 +42,8 @@
         <div class="ui-g-6 ui-md-2 ui-sm-12">
           <label for="cpf">CPF: </label>
           <p-inputMask
+            [(ngModel)]="aluno.cpf"
+            unmask="true"
             mask="999.999.999-99"
             name="cpf"
             styleClass="input"
@@ -43,10 +52,12 @@
         <div class="ui-g-12 ui-md-2">
           <label>Nascimento:</label>
           <p-calendar
+            [(ngModel)]="aluno.nascimento"
             [monthNavigator]="true"
             [yearNavigator]="true"
             yearRange="2000:2030"
             dateFormat="dd/mm/yy"
+            name="nascimento"
           ></p-calendar>
         </div>
       </div>
@@ -54,6 +65,7 @@
       <div class="ui-g-6 ui-md-5 ui-sm-12">
         <label for="nomePai">Nome do Pai:</label>
         <input
+          [(ngModel)]="aluno.nomePai"
           type="text"
           pInputText
           id="nomePai"
@@ -65,6 +77,7 @@
       <div class="ui-g-6 ui-md-5 ui-sm-12">
         <label for="nomeMae">Nome da Mãe:</label>
         <input
+          [(ngModel)]="aluno.nomeMae"
           type="text"
           pInputText
           id="nomeMae"
@@ -84,6 +97,8 @@
         <div class="ui-g-6 ui-md-2 ui-sm-12">
           <label for="residencia">Tel. residencial: </label>
           <p-inputMask
+            unmask="true"
+            [(ngModel)]="contato[0].numero"
             mask="(99)9999-9999"
             name="residencia"
             styleClass="input"
@@ -92,6 +107,8 @@
         <div class="ui-g-12 ui-md-2 ui-sm-12">
           <label for="celular">Tel. celular: </label>
           <p-inputMask
+            unmask="true"
+            [(ngModel)]="contato[1].numero"
             mask="(99)99999-9999"
             name="celular"
             styleClass="input"
@@ -100,6 +117,8 @@
         <div class="ui-g-12 ui-md-2 ui-sm-12">
           <label for="comercial">Tel. comercial: </label>
           <p-inputMask
+            unmask="true"
+            [(ngModel)]="contato[2].numero"
             mask="(99)9999-9999"
             name="comercial"
             styleClass="input"
@@ -130,7 +149,7 @@
         <div class="ui-g-6 ui-md-5 ui-sm-12">
           <label for="endereco">Rua:</label>
           <input
-            [(ngModel)]="endereco.logradouro"
+            [(ngModel)]="endereco.rua"
             type="text"
             pInputText
             id="endereco"
@@ -167,7 +186,7 @@
         <div class="ui-g-3 ui-md-3 ui-sm-12">
           <label for="cidade">Cidade:</label>
           <input
-            [(ngModel)]="endereco.localidade"
+            [(ngModel)]="endereco.cidade"
             type="text"
             pInputText
             id="cidade"
@@ -268,6 +287,29 @@
             <label class="card-label">Quinto Quirodáctilo</label>
           </div>
         </p-fieldset>
+      </div>
+    </div>
+
+    <div class="ui-g m-t-30">
+      <div class="ui-g-12 ui-md-2">
+        <button
+          class="voltar-btn teal-btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+          pButton
+          type="button"
+          icon="ui-icon-chevron-left"
+          routerLink="/"
+          label="Cancelar"
+        ></button>
+      </div>
+      <div class="ui-g-12 ui-md-8"></div>
+      <div class="ui-g-12 ui-md-2">
+        <button
+          class="ui-widget ui-state-default ui-corner-all ui-button-text-only"
+          pButton
+          type="submit"
+          label="Salvar"
+          icon="ui-icon-save"
+        ></button>
       </div>
     </div>
   </form>
